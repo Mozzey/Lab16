@@ -1,0 +1,9 @@
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\bin\Debug\netstandard2.0\Lab16.Library.deps.json
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\bin\Debug\netstandard2.0\Lab16.Library.dll
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\bin\Debug\netstandard2.0\Lab16.Library.pdb
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.csproj.CoreCompileInputs.cache
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.AssemblyInfoInputs.cache
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.AssemblyInfo.cs
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.dll
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.pdb
+C:\Users\Mozzey\GrandCircus\Labs\Lab16\Lab16.Library\obj\Debug\netstandard2.0\Lab16.Library.csprojAssemblyReference.cache
