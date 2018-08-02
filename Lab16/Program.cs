@@ -12,10 +12,8 @@ namespace Lab16
     {
         static void Main(string[] args)
         {
-            var countriesTextFile = new CountriesTextFile();
-            countriesTextFile.DeleteFromFile();
-
-            Console.ReadLine();
+            var countryApp = new CountriesApp();
+            countryApp.Menu(true);
         }
     }
 }

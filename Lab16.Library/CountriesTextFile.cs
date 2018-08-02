@@ -12,52 +12,52 @@ namespace Lab16.Library
 
         public void ReadFromFile()
         {
-            using (var reader = new StreamReader(PATH))
-            {
-                while (!reader.EndOfStream)
-                {
-                    var line = reader.ReadLine();
-                    Console.WriteLine(line);
-                    /*if (line.IndexOf(country, StringComparison.CurrentCultureIgnoreCase) >= 0)
-                    {
-                        Console.WriteLine(line);
-                    }*/
-                }
-            }
+            StreamReader sr = File.OpenText(PATH);
+            Console.WriteLine(sr.ReadToEnd());
+            sr.Close();
         }
-
         public void WriteToFile()
         {
             
             Console.Write("Please type in a country: ");
-            var country = Console.ReadLine();
-            using (var writer = new StreamWriter(PATH, true))
+            var country = Console.ReadLine().ToLower();
+            if (File.Exists(PATH))
             {
-                writer.WriteLine(country);
+                StreamWriter sw = File.AppendText(PATH);
+                sw.WriteLine(country);
+                sw.Close();
             }
+            else
+            {
+                StreamWriter sw = File.CreateText(PATH);
+                sw.WriteLine(country);
+                sw.Close();
+            }
+            
+            
         }
 
         public void DeleteFromFile()
         {
-            using (var reader = new StreamReader(PATH))
+            Console.Write("Please type in a country to be deleted: ");
+            var userInput = Console.ReadLine();
+            var temp = Path.GetTempFileName();
+            using (var sr = new StreamReader(PATH))
+            using(var sw = new StreamWriter(temp))
             {
-                Console.Write("Please type in a country to delete: ");
-                var input = Console.ReadLine();
-                while (!reader.EndOfStream)
+                string line;
+                while ((line = sr.ReadLine()) != null)
                 {
-                    string pattern = @"[A-Za-z]";
-                    string replacement = "";
-                    var line = reader.ReadLine();
-                    Regex regex = new Regex(pattern);
-                    
-                    if (line.IndexOf(input ?? throw new InvalidOperationException(), StringComparison.CurrentCultureIgnoreCase) >= 0)
+                    if (line != userInput)
                     {
-                        string result = pattern.Replace(input, replacement);
-
-                        
+                        sw.WriteLine(line);
                     }
                 }
             }
+            File.Delete(PATH);
+            File.Move(temp, PATH);
+            
+            
         }
     }
 }
